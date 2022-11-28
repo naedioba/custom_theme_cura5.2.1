@@ -1,0 +1,13 @@
+-----
+For the text "Other printers", you will need to open the file MachineSelectorList.qml
+Folder: \Program Files\Ultimaker Cura 5.2.1\share\cura\resources\qml\PrinterSelector
+Text to add in the file theme.json: "text_medium": <you colour>,  (example: "text_medium": [255, 255, 0, 255],)
+
+-----
+For the Slice button when hovered, you will need to open the file SliceProcessWidget.qml
+Folder: \Program Files\Ultimaker Cura 5.2.1\share\cura\resources\qml\ActionPanel
+Go to the section "id: sliceButton"
+Go to the line after "hoverEnabled" arround line 116 and add this line: hoverColor: UM.Theme.getColor("slice_button_hover") 
+-Note: "slice_button_hover" is the name of the parameter to use in the file theme.json for the colour. You can chose any name you want. It is case sensitive
+
+Text to add in the "base colors" section of the file theme.json: "slice_button_hover": <you colour>, (example: "slice_button_hover": [255, 255, 0, 255],) 
